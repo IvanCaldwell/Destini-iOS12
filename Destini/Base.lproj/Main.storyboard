@@ -38,8 +38,9 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pmM-sW-LAV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amk-E0-c5D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amk-E0-c5D">
                                 <rect key="frame" x="16" y="44" width="343" height="574"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -58,6 +59,21 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="17E-TM-9cz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cxQ-ZO-fYK">
+                                <rect key="frame" x="16" y="542" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.67450980390000004" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4uE-Go-hU1"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fjn-Ey-q0m"/>
+                                    <action selector="resetButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PfV-Vx-vZb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="YYD-qC-cgr" firstAttribute="top" secondItem="u0E-Z6-us4" secondAttribute="bottom" constant="34" id="1pn-V9-Sph"/>
@@ -70,7 +86,10 @@
                             <constraint firstItem="amk-E0-c5D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UWG-Ch-uBS"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YYD-qC-cgr" secondAttribute="bottom" constant="18" id="Zil-rd-Zl2"/>
                             <constraint firstAttribute="trailing" secondItem="Erf-gv-fGo" secondAttribute="trailing" id="Zqj-Tf-xWO"/>
+                            <constraint firstItem="cxQ-ZO-fYK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ayq-4l-u9L"/>
+                            <constraint firstItem="u0E-Z6-us4" firstAttribute="top" secondItem="cxQ-ZO-fYK" secondAttribute="bottom" constant="34" id="cWf-5E-9vr"/>
                             <constraint firstItem="YYD-qC-cgr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="d5M-i4-lR2"/>
+                            <constraint firstItem="cxQ-ZO-fYK" firstAttribute="width" secondItem="u0E-Z6-us4" secondAttribute="width" id="lCL-9l-GX7"/>
                             <constraint firstAttribute="trailing" secondItem="YYD-qC-cgr" secondAttribute="trailing" constant="16" id="mba-eL-D4o"/>
                             <constraint firstItem="u0E-Z6-us4" firstAttribute="top" secondItem="amk-E0-c5D" secondAttribute="bottom" constant="8" id="o7B-8v-9JJ"/>
                             <constraint firstAttribute="bottom" secondItem="Erf-gv-fGo" secondAttribute="bottom" id="oHQ-qB-aKu"/>
@@ -78,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomButton" destination="YYD-qC-cgr" id="oTr-dl-hKK"/>
+                        <outlet property="resetButton" destination="cxQ-ZO-fYK" id="ldn-4P-4LQ"/>
                         <outlet property="storyTextView" destination="amk-E0-c5D" id="TU8-d8-Hye"/>
                         <outlet property="topButton" destination="u0E-Z6-us4" id="Dfm-eR-Gan"/>
                     </connections>
